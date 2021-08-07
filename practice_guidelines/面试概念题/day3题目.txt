@@ -1,0 +1,52 @@
+﻿41. 私网网段有哪些？
+10.0.0.0到10.255.255.255
+172.16.0.0到172.31.255.255
+192.168.0.0到192.168.255.255
+42. 简述网络文件系统 NFS,并说明其作用。
+linux系统之间的文件共享系统
+作用就是可以在linux系统上配置，使得linux系统之间可以共享文件资源 
+43. 进程的査看和调度分别使用什么命令？
+pstree、top
+44. 让某普通用户能进行 cp /dir1/file1 /dir2 的命令时，请说明 dir1 file1 最小具有 什么权限？ 
+读权限
+45. 如何关闭 Websphere Server？ 
+./stopServer.sh server1
+46. 统计/home 目录下的文件个数。
+find /home --type d | wc -l
+47. 在超级用户下显示 1inux 系统中正在运行的全部进程，应使用的命令和参数是？
+pstree
+48. 如何查看当前 Linux 系统的位数，如： 64 或者 32 位，请写出命令。
+ uname -a
+49. Linux 关机侖令有哪几种？
+poweroff
+50. 搜索属于用户’userl’的文件和目录命令如何写。 
+51. 如何査看磁盘空间大小？ 
+df -h
+52. Linux 系统中，重启命令有哪些？
+reboot
+53. 若要将 sdb 分区，格式化为 ext4 格式，命令是什么？
+mkfs.ext4 /dev/sdb
+54. 如何将/dev/sdb1 分区挂载到／data1 目录下，并实现开机自动挂载？
+vim /etc/fstab
+编辑
+/dev/sdb1	/data1		ext4	defaults	0	0	 
+55. Eth0 网口配置路径是什么？ 
+/etc/sysconfig/network-scripts/
+56. 如何查看系统分区？
+fsblk
+57. 重启网卡的命令是什么？
+server network restart
+58. 如何配置 yum 源？ 
+cd /etc/yum.repos.d/
+mkdir bak
+mv *.repo bak/
+vim xxx.repo
+编辑
+[xxx]
+name=yyy
+baseurl=.....
+enabled=1
+gpgcheck=0
+59. 在某个路径下査找所有包含＂ hello abcserver＂字符串的文件
+find [路径] -name "*hello abcserver*"
+60. 列出目前系统中所有的正在内存当中的程序 

@@ -1,0 +1,14 @@
+loongson server 5.0 ISO:
+ftp://loongson@10.3.3.110:~/develop/project/server/NKAS7-MIPS/NK7U0/ISO/
+
+loongson desktop 5.0 ISO:
+ftp://loongson:qwe123@10.3.3.110:~/develop/project/V7.0/iso/
+
+x86 HJB desktop 5.0 ISO:
+ftp://10.3.6.1:/dtsh/ISO/HJ-XTY/desktop-V5.0/ISO/
+
+x86 desktop 5.0 ISO:
+ftp://10.3.6.1:/dtsh/ISO/ZY5.0/Base/x86_64/ISO/
+
+x86 server 5.0 ISO:
+ftp://10.3.6.1:/dtsh/ISO/Server/

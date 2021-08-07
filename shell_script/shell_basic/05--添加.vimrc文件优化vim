@@ -1,0 +1,14 @@
+filetype plugin on
+let g:pydiction_location = '/root/.vim/bundle/pydiction/complete-dict'
+syntax on
+"set cursorline
+set scrolloff=7
+set ai
+set ts=4
+set et
+set encoding=utf8
+autocmd FileType yaml setlocal sw=2 ts=2 et ai
+nnoremap <C-a> <Home>
+nnoremap <C-e> <End>
+nnoremap <F2> :set nu! nu?<CR>
+nnoremap ; :

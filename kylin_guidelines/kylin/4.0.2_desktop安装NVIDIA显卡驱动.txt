@@ -1,0 +1,33 @@
+######## 安装显卡驱动（NVIDIA） ########
+
+先拷贝驱动文件到家目录下!!!
+
+1、禁用自带的驱动：
+sudo vim /etc/modprobe.d/blacklist.conf
+按G（大写字母）跳到该文件末尾，按字母o，换行并进入编辑模式
+末行加上：
+blacklist nouveau
+加完后，按":wq"保存并退出
+
+2、更新一下initramfs
+sudo update-initramfs -u
+
+3、重启，并停掉lightdm
+reboot
+然后按ctrl+alt+f2切到字符终端，在字符终端输入用户名和密码登录进去
+sudo systemctl stop lightdm
+
+4、给驱动文件赋权限
+sudo chmod a+x  ./NVIDIA***.run
+
+5、执行驱动文件，进行安装
+sudo ./NVIDIA***.run
+安装过程中，有yes选yes，有ok选ok，安装完成后，会自动回到命令行
+
+6、开启lighdm
+sudo systemctl start lightdm
+
+7、开启了lightdm后，会到图形的登录界面，然后输入用户名密码进入，终端下输入以下命令可确认是否安装成功
+nvidia-settings    可弹出显卡驱动信息框
+nvidia-smi    可显示显卡驱动信息表
+

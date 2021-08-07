@@ -1,0 +1,20 @@
+81. 将/dev/sdal 磁盘挂载到/data 的命令是什么？ EXT4 是指什么？磁盘挂载信息写在哪 个配置文件中？ mount /dev/sda1 /data 文件系统类型为 ext4 /etc/fstab
+82. 请写出 hostname -i 这个命令的作用 显示 IP 地址与 mac 地址
+83. 请写出 find / -type f -mtime +5 | xargs rm -rf 这个命令的作用。 将系统中五天之前的文件，进行统一删除
+84. 打印出/var/test.log 文件的最后 100 行 tail -100 /var/test.log
+85. 修改当前目录下 abc 文件夹的权限为 644 属主和属组为 admin chmod 644 abc chown admin:admin abc
+86. 用 vi 命令编辑 test.txt，直接跳转到末行和首行方法分别是什么？ G gg
+87. Linux 下负责时钟同步的服务名称是什么？如何查看当前服务器的时钟同步状态。 chronyd chronyc sources -v
+88. 请写出 dd if=/dev/zero of=test.log bs=1M count=2048 这条命令的作用。 从/dev/zero 读取数据，每次读取 1M，写入 test.log 文件，共写入 2048 次
+89. 如果想配—台匿名 ftp 服务器，应修改的配置文件是哪个？ /etc/vsftpd/vsftpd.conf
+90. Linux 查看缺省路由的命令是? route
+91. 临时快速删除网关（不重启服务） route del default gw 网关地址
+92. 如何查看 sar 命令所在 rpm 包，给出命令 rpm -qf $(which sar)
+93. a.tar.gz 中有两个 l.conf 文件，请给出仅解压出这两个文件的命令 tar –xf a.tar.gz 1.conf
+94. /data 目录下存在 n 多同名 a.lck 文件，如何快速备份并删除所有 a.lck 文件 find /data -name "a.lck" | xargs tar -zcf /root/niu.tar.gz find /data -name "a.lck" –exec rm –rf {} \;
+95. 如何査看网卡 ethO 连接状态是否正常，给出命令 ifconfig
+96. 使用 rsync 将本机/data 目录同步到 192.168.1.1:/data ,保持原权限和链接，排除 *.iso 文件 rsync -Aavz --exclude "*.iso" /data/ root@192.168.1.1:/data
+97. Linux 下，查看网络连接状态的命令是 ifconfig
+98. 如何查看运行的 Idap 进程占用资源情况 ps aux | grep Idap
+99. Red hat 系统如何配置 DNS 地址 修改/etc/resolv.conf
+100.当我们与某远程网结连接不上时，就需要跟踪路由查看，以便了解在网络的 什么位置 出现了问题，满足该目的的命令是 traceroute

@@ -1,0 +1,8 @@
+系统版本			QT
+
+5.0serverB14			qt4.8.6-18 & qt5.6.2-1
+NKLS-4.0_U5-LS_64-REL-Build21	qt4.8.6-18 & qt5.6.0-3
+5.0serverB13			qt4.8.6-18 & qt5.9.8-4
+
+#suiban
+#ceshi

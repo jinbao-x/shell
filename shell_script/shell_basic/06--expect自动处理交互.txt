@@ -1,0 +1,32 @@
+expect常用用法
+单一分支模式语法：
+	expect "hi" {send "you said hi\n"}
+多分支模式语法：
+	expect "hi" {send "you said hi\n"} \ "hehe" {send "hehe yourself"\n}\ "byebye" {send "good bye\n"}
+	或expect {"hi" {send "you said hi\n"} \ "hehe" {send "hehe yourself"\n} "byebye" {send "good bye\n"}}
+
+执行expect不能以bash file的方式来执行
+必须通过./的方式执行，这样才不会开启子shell进程
+
+示例：
+#!/bin/bash
+set timeout 30
+/usr/bin/expect << EOF
+	spawn ssh xu@172.25.90.102
+	expect {
+		"yes/no" {send "yes\n"; exp_continue}
+		"password" {send "123123\n"}
+	}
+expect eof
+EOF
+
+
+
+什么情况下shell中会用到数组？
+比如写一个面向列表的循环
+如果直接
+for i in {102,105}
+则是可以的，以及
+for i in 172.25.90.{102.105}
+也是可以的，因为后边那个每次循环都可以读取一个值，但是，如果为了脚本规范化，不想每次在循环体这个地方修改列表的值，而是将这个列表以变量那样子的存在脚本最前面，这个时候就需要用到数组了
+

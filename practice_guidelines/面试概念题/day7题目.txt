@@ -1,0 +1,45 @@
+﻿121.删阶一个/etc/A/C/config.cfg （此文件或目录可能不存在）（一条命令）
+rm -r /etc/A/C/config.cfg
+122./opt/harbor 目录打包名为 harbor.tar.gz(一条命令)
+tar  -czvf  harbor.tar.gz  /opt/harbor
+123.在当前目录下创建一个名为 test 的空文件
+touch test
+124.Linux 下查看当前系统的内存使用情况的命令 
+free -m
+125.Linux 下查看系统进程的命令？如果要只查找系统中是否存在匹配 ussd 进程的命是？
+
+126. 命令的帮助是 
+man
+127. 创建一个用户组 xunfang,组 ID 2000，家目录/home/huawei。shell 是 csh，属于 xunfang 组 
+useradd xunfang
+usermod -d /home/huawei
+usermod -s /bin/csh
+groupadd xunfang
+groupmod -g 2000
+128. 编写定时任务和查看定时任务的命令分别是 
+crontab -e
+129. 将时间设置为 2018 年 6 月 18 日 14 点 16 分 30 秒 
+date -s "2018-06-18 14:16:30"
+130. 设置 telent 开机自启动 
+131. 查看/opt/oracle 目录下文件名包含 test 的文件信息 
+find /opt/oracle -name "*grep*"
+132. Linux 下我们经常会使用 find 査找一些文件,如我们需要在/home/ussd 下 査 找 一 个 ussd.log 的文件，查找的命令是
+find /home/ussd -name "ussd.log"
+133.修改/opt/test.tar 文件的权限为归属用户可读可写可执行权限； 同组用户可读可执行权限；其他用户可读权限
+chmod 754 /opt/test.tar 
+134.修改/opt/test.tar 文件的属组为 huawei 用户,xunfang 组;其他用户增加执行权限 
+chown huawei:xufang /opt/test.tar
+chmod o+x /opt/test.tar
+135.挂载/opt/software/xxx-server-x64-dvd.iso 镜像文件到/mnt 
+vim /etc/fstab
+/opt/software/xxx-server-x64-dvd.iso  /mnt   default  0    0
+136.Linux 系统中查看本机路由命令和查看本机 ip 地址的命令
+route -n
+ip address show
+137.当前目录下一共有多少个文件 
+ls -l | wc -l
+138.安装 vcs.rpm 这个软件包，并显示安装进度 
+rpm -ivh vcs.rpm
+139.查看机器负载状况，如何定位高 CPU 占用的进程
+ps -aux | head -1
+140.查看内存使用情况，如何定位使用内存高的进程

@@ -1,0 +1,41 @@
+1、底层操作系统安装
+2、bmc登录上去改个ip
+3、远程到这个ip，修改hostname
+4、修改hosts，按照
+192.168.84.10  controller1
+这样的格式修改，添加规划的IP地址-->这个文件在各个节点应该一致，需要scp到各个节点或用脚本分发
+
+云平台部署：
+5、配置multinode
+6、配置globals.yml
+7、生成password.yml文件，修改此文件内的密码
+8、部署license文件
+kolla-ansible -i multinode copy-licese
+
+9、执行部署环境自动化检查命令
+kolla-ansible prechecks -i multinode
+10、展开
+kolla-ansible deploy -i multinode
+
+云桌面
+admin
+Password01!
+云平台
+admin
+123123
+
+云平台操作：
+1、在云平台创建网络地址池
+2、在云平台上传镜像
+云桌面操作
+3、根据镜像创建模板
+4、根据模板创建资源池
+5、根据资源池批量创建虚拟机
+6、把虚拟机绑定到不同用户上
+7、把虚拟机的usb等权限打开
+
+
+
+
+
+

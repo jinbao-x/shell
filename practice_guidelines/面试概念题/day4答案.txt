@@ -1,0 +1,21 @@
+61. 如何查看进程所占用的端口？ netstat -anptu ss -anptu
+62. 终止当前运行命令的组合键是什么？ Ctrl + c
+63. Ip add 命令是用来查看什么信息的？ 查看 IP 地址
+64. Linux 系统中，ctrl＋alt＋delete 组合键的作用是什么？ 重启
+65. 如何赋子 111 文件执行权限 chmod +x
+66. 在 vi 编辑器中，显示行号的命令是什么？ set nu
+67. 查看当前目录下的隐激文件命令是什么？ ls -A
+68. 编辑器中，强制退出，不保存编辑器内容的命令是什么？ :q!
+69. 永久删除目录 111 的命令是什么？ rm -rf
+70. Vi 编辑器中，如何快速将光标移动到尾行？ End 键
+71. 在 eth0 接口添加 ip 地址 192.168.1.2/24，添加缺省路由，网关为 192.168.1.1 vim /etc/sysconfig/network-script/ifcfg-eth0 IPADDR=192.168.1.2 PREFIX=24 GATEWAY=192.168.1.1
+重启网络服务
+72. 如何重命名一个用户组(old_group_name)为(new_group_name) groupmod -n
+73. Redhat 系统如何下载并安装-个 rpm 包(mysql.rpm),请写出命令 wget mysql.rpm rpm -ivh mysql.rpm 或 yum install mysql.rpm
+74. 查看当前所在目录用什么命令 pwd
+75. Linux 怎么编写一个定时计划任务？里面用到的最小单位是什么？ crontab –e 分钟
+76. 如何查看占用端口 8099 的进程 netstat -anptu | grep 8099
+77. Linux 查看路由表和 ARP 表的命令是什么？ route arp
+78. https 使用的端口是什么、如何查看端口号？ https 是什么协议？ 443 netstat –anptu 安全超文本传输协议
+79. Mysql 数据库默认端口是多少？如何判断服务器上是否开启了 mysql 服务？ 3306 netstat –anptu | grep 3306 或 service mysql status
+80. 在/data 盘找出 test.csv 文件的存放路径，用什么命令？ find /data -name “test.csv”

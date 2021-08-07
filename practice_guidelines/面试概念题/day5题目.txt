@@ -1,0 +1,43 @@
+﻿81. 将/dev/sdal 磁盘挂载到/data 的命令是什么？ EXT4 是指什么？磁盘挂载信息写在哪 个配置文件中？
+vim /etc/fstab
+/dev/sda1	/data		EXT4	defaults	0	0
+EXT4指的是文件类型 
+82. 请写出 hostname -i 这个命令的作用 
+查看主机ip地址
+83. 请写出 find / -type f -mtime +5 | xargs rm -rf 这个命令的作用。
+分批次处理find查找到的文件进行删除 
+84. 打印出/var/test.log 文件的最后 100 行 
+cat /var/test.log  |  tail -100
+85. 修改当前目录下 abc 文件夹的权限为 644 属主和属组为 admin 
+chmod 644 abc
+chown admin:admin abc
+86. 用 vi 命令编辑 test.txt，直接跳转到末行和首行方法分别是什么？ 
+:1
+:$
+87. Linux 下负责时钟同步的服务名称是什么？如何查看当前服务器的时钟同步状态。
+crontab
+88. 请写出 dd if=/dev/zero of=test.log bs=1M count=2048 这条命令的作用。 
+89. 如果想配—台匿名 ftp 服务器，应修改的配置文件是哪个？ 
+/etc/vsftpd/vsftpd.conf
+90. Linux 查看缺省路由的命令是? 
+ip route show
+91. 临时快速删除网关（不重启服务） 
+route del default
+92. 如何查看 sar 命令所在 rpm 包，给出命令
+rpm -ql | grep "sar"
+93. a.tar.gz 中有两个 l.conf 文件，请给出仅解压出这两个文件的命令
+94. /data 目录下存在 n 多同名 a.lck 文件，如何快速备份并删除所有 a.lck 文件
+cd /data
+mkdir bak
+mv a.1ck bak/
+95. 如何査看网卡 ethO 连接状态是否正常，给出命令 
+ip a s | grep "eth0"
+96. 使用 rsync 将本机/data 目录同步到 192.168.1.1:/data ,保持原权限和链接，
+97. Linux 下，查看网络连接状态的命令是
+netstat -ntulp
+98. 如何查看运行的 Idap 进程占用资源情况
+pidstat | "Idap"
+99. Red hat 系统如何配置 DNS 地址
+ /var/named
+100.当我们与某远程网结连接不上时，就需要跟踪路由查看，以便了解在网络的 什么位置 出现了问题，满足该目的的命令是 
+ping ip

@@ -1,0 +1,43 @@
+﻿21. Linux 下，解压缩 bz2 格式文件的命令是 
+tar -jxf
+22. 列举四种你所知晓的操作系统 
+Red Hat Enterprise Linux
+Suse Linux Enterprise
+Debian Linux
+Ubuntu Linux
+23. 分别写出安装和删除下列软件包的命令：
+24. 分别回答下面两题： a)请写出查看软件包 zip-3.0-1.el6.x86_64.rpm 中的所有文件的命令。给出一个文件/usr/bin/autoconf，请问使用什么命令可以查看它属于哪个 rpm 软件 包？ 
+rpm -ql
+rpm -q zip-3.0-1.el6.x86_64.rpm
+25. 网络上有一个 NTP 时间服务器 0.centos.ntp.org，使用什么命令可以把你的服务器与 上述时间服务器的时间同步？
+26. 想要让 Linux 系统每小时执行一次任务需要使用什么服务？配置文件是哪个？
+计划任务
+/var/log/crond
+27. 一台 Linux 服务器无法使用 root 通过 ssh 登录到系统，请问哪里出了问题？需要如何 修改？
+可能防火墙禁止了，可以关闭防火墙
+fire-cmd --set-default-zone=trusted
+28. 一台 Linux 系统上有两块网卡 eth0 和 eth1，请手工给 eth0 网卡配置两个 IP 地址 192.168.0.2 和 192.168.1.2 
+nmcli connection modify eth0 ipv4.method manual ipv4.address 192.168.0.2/24 autoconnect yes
+nmcli connection modify eth1 ipv4.method manual ipv4.address 192.168.1.2/24 autoconnect yes
+29. 请列出 Linux 上可以使用的三个文件系统名称，至少列出一个日志文件系统
+ext4    xfs    
+30. Linux 下 swap 区的作用是什么？
+直接利用硬盘分区空间，充当交换空间
+31. Linux 下支持软 RAID 的工具是什么？列出 3 种常用的 RAID 模式，并简要说明它们的功 能和性能 mdadm 软件
+32. 如果你的 Linux 系统的 root 口令忘记了，请给出一种用 root 用户进入系统的方法。 
+33. /etc/fstab 文件中登记的内容如果有误会导致系统无法启动，请给出如何修复这个问 题的步骤。 
+34. Linux 下分区的工具有哪两个？分别写出命令名称。
+fdisk
+35. 请写入手工启动停止 Linux 下防火墙的命令。 
+firewall-cmd --set-default-zone=trusted
+firewall-cmd --set-default-zone=disabled
+36. 查看服务 modclusterd 服务是否在启动时自动启动的命令是哪个？ 
+ps -aux | grep modclusterd
+37. 请问常用硬盘的最大读写速度是多少？
+38. 使用什么命令可以得到一个 Linux 分区的 UUID 号？
+ls -l /dev/disk/by-uuid
+39. 你平常在使用 Linux 的时候会不会自己编译 RPM 软件包？请写出编译命令。 
+40. 请详细描述 IP 地址分类规则。
+A 1.0.0.0到127.255.255.255
+B 128.0.0.0到191.255.255.255
+C192.0.0.0到223.255.255.255

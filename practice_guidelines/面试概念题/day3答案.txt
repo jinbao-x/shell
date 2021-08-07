@@ -1,0 +1,21 @@
+41. 私网网段有哪些？ A 类：10.10.10.1~10.255.255.254 B 类：172.16.0.1~172.16.255.254 C 类：192.168.0.1~192.168.255.254
+42. 简述网络文件系统 NFS,并说明其作用。 为网络中客户端提供共享使用的文件夹
+43. 进程的査看和调度分别使用什么命令？ ps pstree & jobs bg fg
+44. 让某普通用户能进行 cp /dir1/file1 /dir2 的命令时，请说明 dir1 file1 最小具有 什么权限？ 对/dir1 具有 x 权限 对文件具有 r 权限
+45. 如何关闭 Websphere Server？ 查看 websphere 进程号 kill -9 进程号
+46. 统计/home 目录下的文件个数。 find /home -type f | wc -l
+47. 在超级用户下显示 1inux 系统中正在运行的全部进程，应使用的命令和参数是？ ps aux
+48. 如何查看当前 Linux 系统的位数，如： 64 或者 32 位，请写出命令。 uname -r
+49. Linux 关机侖令有哪几种？
+init 0 poweroff halt shutdown
+50. 搜索属于用户’userl’的文件和目录命令如何写。 find / -user user1
+51. 如何査看磁盘空间大小？ df -h
+52. Linux 系统中，重启命令有哪些？至少写出 2 条命令 reboot init6
+53. 若要将 sdb 分区，格式化为 ext4 格式，命令是什么？ fdisk /dev/sdb mkfs.ext4 /dev/sdb1
+54. 如何将/dev/sdb1 分区挂载到／data1 目录下，并实现开机自动挂载？ vim /etc/fstab /dev/sdb1 /data1 ext4 defaults 0 0
+55. Eth0 网口配置路径是什么？ /etc/sysconfig/network-script/ifcfg-eth0
+56. 如何查看系统分区？ lsblk
+57. 重启网卡的命令是什么？ ifdown ifup
+58. 如何配置 yum 源？ 搭建本地 Yum 仓库，首先具备光盘 ISO 镜像文件直接挂载即可 # mount ISO 镜像文件 挂载点 或者将光盘文件放入光驱设备，再将光驱设备挂载 # mount /dev/cdrom 挂载点 再编写 Yum 客户端配置文件 ######################################## 1.搭建网络 Yum 仓库，服务端搭建 FTP 或者 Web 服务，提供光盘所有内容 2.客户端测试访问服务端搭建 FTP 或者 Web 服务，能否看到光盘所有内容 3.再编写 Yum 客户端配置文件
+59. 在某个路径下査找所有包含＂ hello abcserver＂字符串的文件 grep ‘hello abcserver’ /路径
+60. 列出日前系统中所有的正在内存当中的程序 ps aux

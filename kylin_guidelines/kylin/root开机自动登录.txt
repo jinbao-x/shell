@@ -1,0 +1,23 @@
+对于中标麒麟：
+————————————————————————————————————————————
+默认方法：在lightdm中添加开机自动登录用户
+vim /etc/lightdm/lightdm.conf +117
+将该行备注去掉，后面加上用户root
+
+不常用方法：将lightdm换为gdm，通过gdm设置自登录
+1、将lightem关闭：systemctl disable lightdm
+2、开启gdm：systemctl enable gdm
+3、修改gdm的自动登录：
+修改/etc/gdm/custom.conf 文件
+①修改[daemon]里选项：
+AutomaticLoginEnable=true
+AutomaticLogin=root
+TimedLoginEnable=true
+②修改[security]里选项：
+AllowRoot=true
+
+对于银河麒麟：
+————————————————————————————————————————————
+vim /usr/share/lightdm/lightdm.conf.d/60-kylin.conf
+将greeter-show-manaual-login=false  中的false改为true
+将autologin-user=root               中的kylin改为root

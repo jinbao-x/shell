@@ -1,0 +1,21 @@
+21. Linux 下，解压缩 bz2 格式文件的命令是 bzip2 -d
+22. 列举四种你所知晓的操作系统 Linux Windows ios Unix
+23. 分别写出安装和删除下列软件包的命令：zip-3.0-1.el6.x86_64.rpm rpm –ivh zip-3.0-1.el6.x86_64.rpm rpm -e zip
+24. 分别回答下面两题： a)请写出查看软件包 zip-3.0-1.el6.x86_64.rpm 中的所有文件的命令。 rpm –qpl zip-3.0-1.el6.x86_64.rpm b)给出一个文件/usr/bin/autoconf，请问使用什么命令可以查看它属于哪个 rpm 软件 包？ rpm –qf /usr/bin/autoconf
+25. 网络上有一个 NTP 时间服务器 0.centos.ntp.org，使用什么命令可以把你的服务器与 上述时间服务器的时间同步？ ntpdate 0.centos.ntp.org
+26. 想要让 Linux 系统每小时执行一次任务需要使用什么服务？配置文件是哪个？ crond 周期性计划任务 /etc/crontab
+27. 一台 Linux 服务器无法使用 root 通过 ssh 登录到系统，请问哪里出了问题？需要如何 修改？
+sshd 服务器禁止的 root 登录或 root 用户被锁定 修改/etc/ssh/sshd_config 文件允许 root 进行 ssh 登录 passwd –u root 解锁 root 用户
+28. 一台 Linux 系统上有两块网卡 eth0 和 eth1，请手工给 eth0 网卡配置两个 IP 地址 192.168.0.2 和 192.168.1.2 ifconfig eth0 192.168.0.2 ifconfig eth0:1 192.168.1.2
+29. 请列出 Linux 上可以使用的三个文件系统名称，至少列出一个日志文件系统 ext3 ext4 xfs
+30. Linux 下 swap 区的作用是什么？ 缓解物理内存不足
+31. Linux 下支持软 RAID 的工具是什么？列出 3 种常用的 RAID 模式，并简要说明它们的功 能和性能 mdadm 软件 RAID0 条带模式 至少由两块磁盘组成 效率提升 无容错功能 RAID1 条带模式 至少由两块磁盘组成 效率无提升 具备容错功能 RAID5 条带模式 至少由三块磁盘组成 效率提升 具备容错功能
+32. 如果你的 Linux 系统的 root 口令忘记了，请给出一种用 root 用户进入系统的方法。 重新启动 Linux 系统，进入单用户模式 破解 root 密码
+33. /etc/fstab 文件中登记的内容如果有误会导致系统无法启动，请给出如何修复这个问 题的步骤。 进入单用户模式，修改/etc/fstab 文件 将错误的内容修改正确 进行启动系统
+34. Linux 下分区的工具有哪两个？分别写出命令名称。 fdisk parted
+35. 请写入手工启动停止 Linux 下防火墙的命令。 systemctl stop firewalld service iptables stop
+36. 查看服务 modclusterd 服务是否在启动时自动启动的命令是哪个？ chkconfig --list modclusterd systemctl is-enabled modclusterd
+37. 请问常用硬盘的最大读写速度是多少？ 7200rpm
+38. 使用什么命令可以得到一个 Linux 分区的 UUID 号？ blkid
+39. 你平常在使用 Linux 的时候会不会自己编译 RPM 软件包？请写出编译命令。 rpmbuild
+40. 请详细描述 IP 地址分类规则。 A 类：1~126 127 为回环地址 B 类：128~191 C 类：192~223 D 类：224~239 E 类：240~255
